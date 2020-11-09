@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+  <meta name="format-detection"content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <title>国舜绿建-绿色装配式钢结构建筑倡导者</title>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/modernizr.2.5.3.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/basic.css"/>
+</head>
+<body>
+              
+  <div class="flipbook-viewport" style="display:none;">
+      <div class="container">
+        <div class="flipbook">
+      			  <div style="background:url(image/0.jpg) center top no-repeat;background-size:100% 100%">
+      			  </div>
+      			  <div style="background:url(image/1.jpg) center top no-repeat;background-size:100% 100%">
+      			  </div>
+              <div style="background:url(image/2.jpg) center top no-repeat;background-size:100% 100%">
+              </div>
+              <div style="background:url(image/3.jpg) center top no-repeat;background-size:100% 100%">
+              </div>
+              <div style="background:url(image/4.jpg) center top no-repeat;background-size:100% 100%">
+              </div>
+              <div id="fth" style="background:url(image/5.jpg) center top no-repeat;background-size:100% 100%">
+              </div>
+              <div style="background:url(image/6.jpg) center top no-repeat;background-size:100% 100%">
+              </div>
+              <div style="background:url(image/7.jpg) center top no-repeat;background-size:100% 100%">
+              </div>
+              <div id="sevth" style="background:url(image/8.jpg) center top no-repeat;background-size:100% 100%">
+              </div>
+              <div id="tenth" style="background:url(image/9.jpg) center top no-repeat;background-size:100% 100%">
+              </div>
+              <div style="background:url(image/10.jpg) center top no-repeat;background-size:100% 100%">
+              </div>
+              <div  style="background:url(image/11.jpg) center top no-repeat;background-size:100% 100%">
+              </div>
+              <div  style="background:url(image/12.jpg) center top no-repeat;background-size:100% 100%">
+              </div>
+               <div style="background:url(image/13.jpg) center top no-repeat;background-size:100% 100%">
+              </div>
+              <div style="background:url(image/14.jpg) center top no-repeat;background-size:100% 100%">
+              </div>
+              <div style="background:url(image/15.jpg) center top no-repeat;background-size:100% 100%">
+              </div>
+              <div style="background:url(image/16.jpg) center top no-repeat;background-size:100% 100%">
+              </div>
+              <div  style="background:url(image/17.jpg) center top no-repeat;background-size:100% 100%">
+              </div>
+              <div style="background:url(image/18.jpg) center top no-repeat;background-size:100% 100%">
+              </div>
+              <div style="background:url(image/19.jpg) center top no-repeat;background-size:100% 100%">
+              </div>
+              <div style="background:url(image/20.jpg) center top no-repeat;background-size:100% 100%">
+              </div>
+              <div style="background:url(image/21.jpg) center top no-repeat;background-size:100% 100%">
+              </div>
+              <div style="background:url(image/22.jpg) center top no-repeat;background-size:100% 100%">
+              </div>
+              <div id="last" style="background:url(image/23.jpg) center top no-repeat;background-size:100% 100%">
+              </div>
+              
+              <div id="nnn" style="background:url() center top no-repeat;background-size:100% 100%">
+              </div>
+        </div>
+       </div>
+  </div>
+  <div id="end" style="display:none;width:100%;height:100%;background:url() center top no-repeat;background-size:100% 100%">
+    <div id="btns">
+      <a style="margin-bottom:40px;" href="index.html" id="rewatch">再看一遍</a>
+      <button class="share_btn"  onclick="text('11')" style="margin-bottom:200px;"  data-title="国舜绿建-绿色装配式钢结构建筑倡导者" data-pic="image/weinxin_share.png">分享给好友</button>
+  </div>
+ 
+  </div>
+
+
+  <script type="text/javascript">
+      $(function progressbar(){
+        var w = $(".graph").width();
+        $(".flipbook-viewport").show();
+      });
+      //屏蔽ios下上下弹性
+      $(window).on('scroll.elasticity', function (e) {
+          e.preventDefault();
+      }).on('touchmove.elasticity', function (e) {
+          e.preventDefault();
+      });
+      function text(id) {
+            var div = document.getElementById(id);
+                    if (div.style.display == 'block') {
+                        div.style.display = 'none';
+                    } else { 
+                        div.style.display = 'block';
+                    }
+                    document.getElementById('11').innerHTML=div;
+        } 
+      function loadApp() {
+          var w=$(window).width();
+          var h=$(window).height();
+          $('.flipboox').width(w).height(h);
+          $(window).resize(function(){
+              w=$(window).width();
+              h=$(window).height();
+              $('.flipboox').width(w).height(h);
+          });
+          $('.flipbook').turn({
+                  // Width
+                  width:w,
+                  // Height
+                  height:h,
+                  // Elevation
+                  elevation: 50,
+                  display :'single',
+                  // Enable gradients
+                  gradients: true,
+                  // Auto center this flipbook
+                  autoCenter: true
+          });
+      }
+      yepnope({
+          test : Modernizr.csstransforms,
+          yep: ['js/turn.js'],
+          complete: loadApp
+      });
+</script>
+
+</body>
+</html>
